@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaUser, FaEnvelope, FaPhone, FaAddressCard } from "react-icons/fa";
+import { FaUser, FaEnvelope, FaPhone, FaAddressCard, FaFlag, FaGlobe, FaTools } from "react-icons/fa"; // Additional icons
 
 const RegistrationForm = () => {
     const [formData, setFormData] = useState({
@@ -52,20 +52,20 @@ const RegistrationForm = () => {
     };
 
     return (
-        <div className="flex items-center justify-center h-screen bg-gradient-to-br from-blue-400 to-indigo-600">
-            <div className="bg-white rounded-lg shadow-lg p-6 md:p-8 lg:p-10 w-full max-w-xl">
-                <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-                    Register Your Profile
+        <div className="flex items-center justify-center h-screen bg-gradient-to-br from-purple-500 to-indigo-600">
+            <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-xl">
+                <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+                    Create Your Account
                 </h2>
-                <form className="space-y-4" onSubmit={handleSubmit}>
+                <form className="space-y-6" onSubmit={handleSubmit}>
                     {/* Name Field */}
-                    <div className="flex items-center space-x-2">
-                        <FaUser className="text-xl text-gray-600" />
+                    <div className="flex items-center space-x-3">
+                        <FaUser className="text-2xl text-purple-600" />
                         <input
                             type="text"
                             name="name"
-                            placeholder="Name"
-                            className="border-2 focus:border-blue-400 focus:ring focus:ring-blue-200 p-2 w-full rounded transition-all"
+                            placeholder="Full Name (e.g., Jane Doe)"
+                            className="border-2 focus:border-purple-400 focus:ring focus:ring-purple-200 p-3 w-full rounded-lg transition-all"
                             value={formData.name}
                             onChange={handleChange}
                             required
@@ -73,13 +73,13 @@ const RegistrationForm = () => {
                     </div>
 
                     {/* Email Field */}
-                    <div className="flex items-center space-x-2">
-                        <FaEnvelope className="text-xl text-gray-600" />
+                    <div className="flex items-center space-x-3">
+                        <FaEnvelope className="text-2xl text-purple-600" />
                         <input
                             type="email"
                             name="email"
-                            placeholder="Email"
-                            className="border-2 focus:border-blue-400 focus:ring focus:ring-blue-200 p-2 w-full rounded transition-all"
+                            placeholder="Email Address (e.g., jane.doe@example.com)"
+                            className="border-2 focus:border-purple-400 focus:ring focus:ring-purple-200 p-3 w-full rounded-lg transition-all"
                             value={formData.email}
                             onChange={handleChange}
                             required
@@ -87,13 +87,13 @@ const RegistrationForm = () => {
                     </div>
 
                     {/* Username Field */}
-                    <div className="flex items-center space-x-2">
-                        <FaUser className="text-xl text-gray-600" />
+                    <div className="flex items-center space-x-3">
+                        <FaUser className="text-2xl text-purple-600" />
                         <input
                             type="text"
                             name="username"
-                            placeholder="Username"
-                            className="border-2 focus:border-blue-400 focus:ring focus:ring-blue-200 p-2 w-full rounded transition-all"
+                            placeholder="Username (e.g., janedoe123)"
+                            className="border-2 focus:border-purple-400 focus:ring focus:ring-purple-200 p-3 w-full rounded-lg transition-all"
                             value={formData.username}
                             onChange={handleChange}
                             required
@@ -101,13 +101,13 @@ const RegistrationForm = () => {
                     </div>
 
                     {/* Phone Field */}
-                    <div className="flex items-center space-x-2">
-                        <FaPhone className="text-xl text-gray-600" />
+                    <div className="flex items-center space-x-3">
+                        <FaPhone className="text-2xl text-purple-600" />
                         <input
                             type="text"
                             name="phone"
-                            placeholder="Phone"
-                            className="border-2 focus:border-blue-400 focus:ring focus:ring-blue-200 p-2 w-full rounded transition-all"
+                            placeholder="Phone Number (e.g., 9876543210)"
+                            className="border-2 focus:border-purple-400 focus:ring focus:ring-purple-200 p-3 w-full rounded-lg transition-all"
                             value={formData.phone}
                             onChange={handleChange}
                             required
@@ -115,11 +115,11 @@ const RegistrationForm = () => {
                     </div>
 
                     {/* Gender Field */}
-                    <div className="flex items-center space-x-2">
-                        <FaUser className="text-xl text-gray-600" />
+                    <div className="flex items-center space-x-3">
+                        <FaUser className="text-2xl text-purple-600" />
                         <select
                             name="gender"
-                            className="border-2 focus:border-blue-400 focus:ring focus:ring-blue-200 p-2 w-full rounded transition-all"
+                            className="border-2 focus:border-purple-400 focus:ring focus:ring-purple-200 p-3 w-full rounded-lg transition-all"
                             value={formData.gender}
                             onChange={handleChange}
                             required
@@ -132,13 +132,13 @@ const RegistrationForm = () => {
                     </div>
 
                     {/* Address Field */}
-                    <div className="flex items-center space-x-2">
-                        <FaAddressCard className="text-xl text-gray-600" />
+                    <div className="flex items-center space-x-3">
+                        <FaAddressCard className="text-2xl text-purple-600" />
                         <input
                             type="text"
                             name="address"
-                            placeholder="Address"
-                            className="border-2 focus:border-blue-400 focus:ring focus:ring-blue-200 p-2 w-full rounded transition-all"
+                            placeholder="Home Address (e.g., 123 Main St)"
+                            className="border-2 focus:border-purple-400 focus:ring focus:ring-purple-200 p-3 w-full rounded-lg transition-all"
                             value={formData.address}
                             onChange={handleChange}
                             required
@@ -146,13 +146,13 @@ const RegistrationForm = () => {
                     </div>
 
                     {/* Pincode Field */}
-                    <div className="flex items-center space-x-2">
-                        <FaAddressCard className="text-xl text-gray-600" />
+                    <div className="flex items-center space-x-3">
+                        <FaFlag className="text-2xl text-purple-600" />
                         <input
                             type="text"
                             name="pincode"
-                            placeholder="Pincode"
-                            className="border-2 focus:border-blue-400 focus:ring focus:ring-blue-200 p-2 w-full rounded transition-all"
+                            placeholder="Pincode (e.g., 123456)"
+                            className="border-2 focus:border-purple-400 focus:ring focus:ring-purple-200 p-3 w-full rounded-lg transition-all"
                             value={formData.pincode}
                             onChange={handleChange}
                             required
@@ -160,13 +160,13 @@ const RegistrationForm = () => {
                     </div>
 
                     {/* Country Field */}
-                    <div className="flex items-center space-x-2">
-                        <FaAddressCard className="text-xl text-gray-600" />
+                    <div className="flex items-center space-x-3">
+                        <FaGlobe className="text-2xl text-purple-600" />
                         <input
                             type="text"
                             name="country"
-                            placeholder="Country"
-                            className="border-2 focus:border-blue-400 focus:ring focus:ring-blue-200 p-2 w-full rounded transition-all"
+                            placeholder="Country (e.g., United States)"
+                            className="border-2 focus:border-purple-400 focus:ring focus:ring-purple-200 p-3 w-full rounded-lg transition-all"
                             value={formData.country}
                             onChange={handleChange}
                             required
@@ -174,13 +174,13 @@ const RegistrationForm = () => {
                     </div>
 
                     {/* Skills Field */}
-                    <div className="flex items-center space-x-2">
-                        <FaUser className="text-xl text-gray-600" />
+                    <div className="flex items-center space-x-3">
+                        <FaTools className="text-2xl text-purple-600" />
                         <input
                             type="text"
                             name="skills"
-                            placeholder="Skills (e.g., React, Node)"
-                            className="border-2 focus:border-blue-400 focus:ring focus:ring-blue-200 p-2 w-full rounded transition-all"
+                            placeholder="Skills (e.g., React, Node.js)"
+                            className="border-2 focus:border-purple-400 focus:ring focus:ring-purple-200 p-3 w-full rounded-lg transition-all"
                             value={formData.skills}
                             onChange={handleChange}
                             required
@@ -189,10 +189,10 @@ const RegistrationForm = () => {
 
                     {/* Submit Button */}
                     <button
-                        className="bg-blue-500 text-white p-3 w-full rounded hover:bg-blue-600 transition-all transform hover:scale-105"
+                        className="bg-purple-500 text-white p-3 w-full rounded-lg hover:bg-purple-600 transition-all transform hover:scale-105"
                         type="submit"
                     >
-                        Register 🎉
+                        Register Now 🎉
                     </button>
                 </form>
             </div>
