@@ -19,7 +19,7 @@ const Home = () => {
                 {/* Navigation Links */}
                 <div className="space-y-4">
                     <Link
-                        to="/"
+                        to="/login"
                         className="flex items-center justify-center bg-blue-600 text-white font-semibold p-3 rounded-lg hover:bg-blue-700 transition-all duration-300"
                     >
                         <FaSignInAlt className="mr-2" />
