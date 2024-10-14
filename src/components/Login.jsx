@@ -16,7 +16,7 @@ const Login = () => {
     if (userExists) {
       // Redirect to Home Page on successful login
       alert("🎉 Login successful!");
-      navigate("/");
+      navigate("/ProfilePage");
     } else {
       setErrorMessage("⚠️ Username not found!");
     }
