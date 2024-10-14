@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaSignInAlt, FaUserPlus } from "react-icons/fa"; // Importing icons
+import { FaSignInAlt, FaUserPlus, FaUserFriends } from "react-icons/fa"; // Importing icons
 import { GiHouse } from "react-icons/gi";
 
 const Home = () => {
@@ -32,6 +32,14 @@ const Home = () => {
                         <FaUserPlus className="mr-2" />
                         Register
                     </Link>
+                    <Link
+                        to="/AllUsersProfile"
+                        className="flex items-center justify-center bg-teal-600 text-white font-semibold p-3 rounded-lg hover:bg-teal-700 transition-all duration-300"
+                    >
+                        <FaUserFriends className="mr-2" />
+                        All Users
+                    </Link>
+
                 </div>
             </div>
         </div>
