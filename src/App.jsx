@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import AllUsersProfile from "./components/AllUsersProfile";
 import ProfilePage from "./components/ProfilePage";
 import ViewProfile from "./components/ViewProfile";
+import Error from "./components/Error";
 function App() {
   return (
     <Router>
@@ -15,6 +16,7 @@ function App() {
         <Route path="/ProfilePage" element={<ProfilePage />} />
         <Route path="/AllUsersProfile" element={<AllUsersProfile />} />
         <Route path="/ViewProfile" element={<ViewProfile />} />
+        <Route path="*" element={<Error />} />
 
       </Routes>
     </Router>
